@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { MaterializeModule } from 'angular2-materialize';
 
 import { routing } from './app.routing';
@@ -12,6 +13,7 @@ import { ContactComponent } from './contact/contact.component';
 import { SplashComponent } from './splash/splash.component';
 import { FooterComponent } from './footer/footer.component';
 import { ConsultancyComponent } from './consultancy/consultancy.component';
+import { PdfComponent } from './pdf/pdf.component';
 
 @NgModule({
   declarations: [
@@ -20,14 +22,16 @@ import { ConsultancyComponent } from './consultancy/consultancy.component';
     ContactComponent,
     SplashComponent,
     FooterComponent,
-    ConsultancyComponent
+    ConsultancyComponent,
+    PdfComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     routing,
-    MaterializeModule
+    MaterializeModule,
+    PdfViewerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
