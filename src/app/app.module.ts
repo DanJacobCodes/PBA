@@ -12,8 +12,21 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { SplashComponent } from './splash/splash.component';
 import { FooterComponent } from './footer/footer.component';
-import { ConsultancyComponent } from './consultancy/consultancy.component';
 import { PdfComponent } from './pdf/pdf.component';
+import { AngularFireModule } from 'angularfire2';
+import { LoginComponent } from './login/login.component';
+import { EmailComponent } from './email/email.component';
+import { MembersComponent } from './members/members.component';
+import { SignupComponent } from './signup/signup.component';
+
+export const firebaseConfig = {
+    apiKey: "AIzaSyDak32uDcVvgNgbmtaa_TlmrTVTFsUB2_U",
+    authDomain: "pba-econtact.firebaseapp.com",
+    databaseURL: "https://pba-econtact.firebaseio.com",
+    storageBucket: "pba-econtact.appspot.com",
+    messagingSenderId: "868683740699"
+}
+
 
 @NgModule({
   declarations: [
@@ -22,8 +35,11 @@ import { PdfComponent } from './pdf/pdf.component';
     ContactComponent,
     SplashComponent,
     FooterComponent,
-    ConsultancyComponent,
-    PdfComponent
+    PdfComponent,
+    LoginComponent,
+    EmailComponent,
+    MembersComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +47,8 @@ import { PdfComponent } from './pdf/pdf.component';
     HttpModule,
     routing,
     MaterializeModule,
-    PdfViewerModule
+    PdfViewerModule,
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
