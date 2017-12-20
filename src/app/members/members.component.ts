@@ -1,26 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-
-@Component({
-  selector: 'app-members',
-  templateUrl: './members.component.html',
-  styleUrls: ['./members.component.css']
-})
-export class MembersComponent implements OnInit {
-
-  import { Component, OnInit } from '@angular/core';
 import { AngularFire, AuthProviders, AuthMethods } from 'angularfire2';
 import { Router } from '@angular/router';
 import { moveIn, fallIn, moveInLeft } from '../router.animations';
 
 @Component({
-  selector: 'app-other',
-  templateUrl: './other.component.html',
-  styleUrls: ['./other.component.css'],
+  selector: 'app-members',
+  templateUrl: './members.component.html',
+  styleUrls: ['./members.component.css'],
   animations: [moveIn(), fallIn(), moveInLeft()],
   host: {'[@moveIn]': ''}
 })
 
-export class OtherComponent implements OnInit {
+export class MembersComponent implements OnInit {
   name: any;
   state: string = '';
 
@@ -43,7 +34,5 @@ export class OtherComponent implements OnInit {
 
   ngOnInit() {
   }
-
-}
 
 }

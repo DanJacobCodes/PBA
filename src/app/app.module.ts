@@ -5,7 +5,9 @@ import { HttpModule } from '@angular/http';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { MaterializeModule } from 'angular2-materialize';
 
-import { routing } from './app.routing';
+import { routes } from './app.routing';
+import { AuthGuard } from './auth.service';
+
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
@@ -45,12 +47,12 @@ export const firebaseConfig = {
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing,
+    routes,
     MaterializeModule,
     PdfViewerModule,
     AngularFireModule.initializeApp(firebaseConfig)
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
